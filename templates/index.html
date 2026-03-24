@@ -1,21 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Ludo Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Ludo 🎲</title>
+
+    <!-- Google Font (optional but looks better) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- LINK CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-<h1>🎲 Ludo Game</h1>
+<div class="game-container">
 
-<div id="turn">Player 1 Turn</div>
+    <!-- GAME PANEL -->
+    <div class="game-panel">
 
-<button onclick="rollDice()">Roll Dice</button>
-<h2 id="dice">0</h2>
+        <!-- TITLE -->
+        <h1 class="title">🎲 Royal Ludo</h1>
 
-<!-- Board -->
-<div class="board" id="board"></div>
+        <!-- BOARD -->
+        <div id="board" class="board"></div>
 
+        <!-- INFO PANEL -->
+        <div class="info-panel">
+
+            <!-- TURN DISPLAY -->
+            <div class="turn-indicator" id="turnDisplay">
+                🔴 Red Turn
+            </div>
+
+            <!-- DICE SECTION -->
+            <div class="dice-area">
+                <div class="dice" id="dice">⚀</div>
+                <button class="roll-btn" id="rollBtn">🎲 Roll</button>
+            </div>
+
+            <!-- RESET BUTTON -->
+            <button class="reset-btn" id="resetBtn">🔄 New Game</button>
+
+            <!-- MESSAGE BOX -->
+            <div class="message" id="msgBox">
+                Click Roll & select a token
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- SCRIPT -->
 <script src="{{ url_for('static', filename='board.js') }}"></script>
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 
