@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ludo Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>🎲 Ludo Game</h1>
+
+<div id="turn">Player 1 Turn</div>
+
+<button onclick="rollDice()">Roll Dice</button>
+<h2 id="dice">0</h2>
+
+<!-- Board -->
+<div class="board" id="board"></div>
+
+<script src="{{ url_for('static', filename='board.js') }}"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
